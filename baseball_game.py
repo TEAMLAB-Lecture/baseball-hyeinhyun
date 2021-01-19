@@ -281,7 +281,10 @@ def main():
                     random_number = str(get_not_duplicated_three_digit_number())
                     print("Random Number is : ", random_number)
                 else:#no
-                    break
+                    if is_no(ans):
+                        break
+                    else:
+                        print('WRONG INPUT, Input again')
         else:
             print('WRONG INPUT, Input again')
 
@@ -292,3 +295,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
