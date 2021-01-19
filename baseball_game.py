@@ -86,8 +86,8 @@ def is_duplicated_number(three_digit):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-
-    result = True if int(three_digit)%111!=0 else False
+    
+    result = True if len(set(three_digit))<3 else False
     # ==================================
     return result
 
@@ -118,7 +118,7 @@ def is_validated_number(user_input_number):
     result=False
     if is_digit(u):
         if is_between_100_and_999(u):
-            if is_duplicated_number(u):
+            if not is_duplicated_number(u):
                 result=True
 
     # ==================================
@@ -146,7 +146,7 @@ def get_not_duplicated_three_digit_number():
     # get_random_number() 함수를 사용하여 random number 생성
 
     result = get_random_number()
-    while result%111 ==0:
+    while is_duplicated_number(result):
         result=get_random_number()
     # ==================================
     return result
