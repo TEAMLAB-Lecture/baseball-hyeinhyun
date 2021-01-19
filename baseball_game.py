@@ -277,7 +277,9 @@ def main():
             print(f'Strikes : {s} , Balls : {b}')
             if s==3:
                 ans=input('You win, one more(Y/N)?')
-                if is_yes(ans):
+                if ans=='0':
+                    break
+                elif is_yes(ans):
                     random_number = str(get_not_duplicated_three_digit_number())
                     print("Random Number is : ", random_number)
                 else:#no
