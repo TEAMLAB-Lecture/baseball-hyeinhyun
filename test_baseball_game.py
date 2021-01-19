@@ -231,3 +231,6 @@ class TestBaseballGame(unittest.TestCase):
                     ball += 1
         result = [strikes, ball]
         return result
+
+
+t=TestBaseballGame()
