@@ -131,7 +131,6 @@ class TestBaseballGame(unittest.TestCase):
         input_list.append("nvjd")
         input_list.append("nown")
         input_list.append("3orio2kr3o")
-
         input_list.append("No")
 
         with patch('builtins.input', side_effect=input_list):
@@ -231,5 +230,8 @@ class TestBaseballGame(unittest.TestCase):
                     ball += 1
         result = [strikes, ball]
         return result
+if __name__ == "__main__":
+    t=TestBaseballGame()
+    t.test_main()
 
 
