@@ -87,7 +87,7 @@ def is_duplicated_number(three_digit):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
     
-    result = True if len(set(three_digit))<3 else False
+    result = True if len(set(str(three_digit)))<3 else False
     # ==================================
     return result
 
@@ -256,7 +256,7 @@ def is_no(one_more_input):
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
 
     result = False
-    if one_more_input.lower=='no' or one_more_input.lower=='n':
+    if one_more_input.lower()=='no' or one_more_input.lower()=='n':
         result=True
     # ==================================
     return result
@@ -270,6 +270,8 @@ def main():
     # 위의 코드를 포함하여 자유로운 수정이 가능함
     while True:
         user_input = input('Input guess number : ')
+        if user_input==0:
+            break
         if is_validated_number(user_input):
             s,b=get_strikes_or_ball(user_input,random_number)
             print(f'Strikes : {s} , Balls : {b}')
