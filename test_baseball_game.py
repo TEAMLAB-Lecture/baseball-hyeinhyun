@@ -230,8 +230,6 @@ class TestBaseballGame(unittest.TestCase):
                     ball += 1
         result = [strikes, ball]
         return result
-if __name__ == "__main__":
-    t=TestBaseballGame()
-    t.test_main()
+
 
 
