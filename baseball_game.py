@@ -283,7 +283,7 @@ def main():
                 else:#no
                     break
         else:
-            print('Wrong Input, Input again')
+            print('WRONG INPUT, Input again')
 
 
     # ==================================
