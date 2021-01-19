@@ -233,4 +233,3 @@ class TestBaseballGame(unittest.TestCase):
         return result
 
 
-t=TestBaseballGame()
